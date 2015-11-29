@@ -8,5 +8,5 @@ http://askubuntu.com/questions/31826/wifi-stops-working-after-waking-from-suspen
 
 ## Install
 
-    $ sudo install -b -m 755 -o root -g root 00_wireless_sleep /etc/pm/sleep.d/00_wireless_sleep
+    $ sudo ./install
 
