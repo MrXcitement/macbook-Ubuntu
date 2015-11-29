@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# 00_wireless_sleep --- Reload the wl driver when a macbook resumes from suspend
+# Mike Barker <mike@thebarkers.com>
+# November 29th, 2015
+
+# More info here:
+# http://askubuntu.com/questions/31826/wifi-stops-working-after-waking-from-suspend-with-a-broadcom-43225
+
+# History:
+# 2015.11.29 Created.
+
+DRIVER=wl
+
+case "$1" in
+suspend|hibernate)
+	/sbin/rmmod $DRIVER
+	;;
+resume|thaw)
+	/sbin/rmmod $DRIVER
+	/sbin/modprobe $DRIVER
+	;;
+esac
+exit 0

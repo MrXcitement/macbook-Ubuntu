@@ -1,0 +1,3 @@
+#!/bin/sh
+
+install -b -m 755 -o root -g root 00_wireless_sleep /etc/pm/sleep.d/00_wireless_sleep
